@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import {ChakraProvider} from '@chakra-ui/react'
-
-const client = new ApolloClient({
-  uri: 'https://flyby-gateway.herokuapp.com/',
-  cache: new InMemoryCache(),
-});
+import { ApolloProvider } from '@apollo/client';
+import client from './client';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
